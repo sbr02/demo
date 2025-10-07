@@ -28,10 +28,9 @@ const Testimonials = ({ dark }) => {
         </div>
 
         {/* Right Side - Scattered Cards */}
-        <div className="lg:w-2/3 relative h-auto">
-
-          {/* Mobile 2-column grid */}
-          <div className="grid grid-cols-2 lg:hidden justify-items-center gap-11">
+        <div className="lg:w-2/3 relative h-auto lg:h-[500px]">
+          {/* Mobile wrapper: flex-col stack */}
+          <div className="flex flex-col items-center gap-6 lg:hidden">
             {testimonials.map((testimonial, index) => (
               <ReviewCard key={index} dark={dark} data={testimonial} />
             ))}
