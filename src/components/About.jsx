@@ -22,7 +22,7 @@ const About = ({ dark }) => {
         {/* Circle Image */}
         <div className="flex justify-center lg:w-1/2 mb-4 lg:mb-0">
           <img
-            src="img2.jpg"
+            src="/img2.jpg"
             alt="About"
             className="w-64 h-64 md:w-200 md:h-100 object-fill"
           />

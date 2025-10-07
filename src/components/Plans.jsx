@@ -336,7 +336,7 @@ const plans = [
     speed: "50 Mbps",
     description: "Reliable speed for browsing, video calls, and streaming in small families.",
     price: 450,
-    image: "family.png",
+    image: "/family.png",
     packages: [
       { name: "1 Month", planPrice: 450, installation: 1500 },
       { name: "3 Months", planPrice: 1100, installation: 1500 },
@@ -350,7 +350,7 @@ const plans = [
     speed: "100 Mbps",
     description: "Great for HD streaming, gaming, and multiple devices at once.",
     price: 500,
-    image: "prime.png",
+    image: "/prime.png",
     packages: [
       { name: "1 Month", planPrice: 500, installation: 1500 },
       { name: "3 Months", planPrice: 1200, installation: 1500 },
@@ -364,7 +364,7 @@ const plans = [
     speed: "200 Mbps",
     description: "Ultra-fast speeds for 4K streaming, gaming, downloads, and smart devices.",
     price: 550,
-    image: "power.png",
+    image: "/power.png",
     packages: [
       { name: "1 Month", planPrice: 550, installation: 1500 },
       { name: "3 Months", planPrice: 1350, installation: 1500 },
