@@ -28,21 +28,34 @@ const Testimonials = ({ dark }) => {
         </div>
 
         {/* Right Side - Scattered Cards */}
-        <div className="lg:w-2/3 relative h-[500px]">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="absolute transition-all duration-300"
-              style={{
-                top: cardPositions[index].top,
-                left: cardPositions[index].left,
-                transform: "translateX(-50%)",
-                zIndex: 10,
-              }}
-            >
-              <ReviewCard dark={dark} data={testimonial} />
-            </div>
+        <div className="lg:w-2/3 relative h-auto">
+
+          {/* Mobile 2-column grid */}
+          <div className="grid grid-cols-2 lg:hidden justify-items-center gap-11">
+            {testimonials.map((testimonial, index) => (
+              <ReviewCard key={index} dark={dark} data={testimonial} />
+            ))}
+          </div>
+
+          {/* Desktop scattered cards */}
+          <div className="hidden lg:block relative h-[500px]">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="absolute transition-all duration-300"
+                style={{
+                  top: cardPositions[index].top,
+                  left: cardPositions[index].left,
+                  transform: "translateX(-50%)",
+                  zIndex: 10,
+                }}
+              >
+                <ReviewCard dark={dark} data={testimonial} />
+              </div>
           ))}
+          </div>
+          
+
         </div>
       </div>
     </section>

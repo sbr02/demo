@@ -66,7 +66,7 @@ const Home = ({ dark }) => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover transition-opacity duration-500"
+          className="w-auto h-auto object-cover transition-opacity duration-500"
         >
           <source src={dark ? "/photo1.mp4" : "/photo2.mp4"} type="video/mp4" />
         </video>

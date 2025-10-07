@@ -24,7 +24,7 @@ const About = ({ dark }) => {
           <img
             src="/img2.jpg"
             alt="About"
-            className="w-64 h-64 md:w-200 md:h-100 object-fill"
+            className="w-auto h-auto md:w-200 md:h-100 object-fill"
           />
         </div>
 

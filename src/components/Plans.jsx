@@ -376,9 +376,9 @@ const plans = [
 
 // Plan Card Component
 const PlanCard = ({ plan, onViewMore }) => (
-  <div className="rounded-2xl shadow-lg hover:shadow-2xl transition-all gap-0 duration-300 p-5 flex flex-col justify-between w-64 sm:w-90 min-h-[360px] mx-auto bg-white">
+  <div className="rounded-2xl shadow-lg hover:shadow-2xl transition-all gap-0 duration-300 p-5 flex flex-col justify-between w-full max-w-xs sm:max-w-sm  sm:w-90 min-h-[360px] bg-white">
     {plan.image && (
-      <img src={plan.image} alt={`${plan.speed} plan`} className="w-80 h-80 object-cover square-full mb-5 mx-auto" />
+      <img src={plan.image} alt={`${plan.speed} plan`} className="w-full h-auto object-cover square-full mb-5 mx-auto" />
     )}
     <h2 className="text-xl text-black sm:text-xl lg:text-2xl font-bold mb-3 text-center flex items-center justify-center gap-2">
       <span>{plan.icon}</span> {plan.name} ({plan.speed})
