@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Options = ({ planName, packages, onClose }) => {
+const Options = ({ planName, packages, onClose, dark }) => {
   const [selectedPackage, setSelectedPackage] = useState(null);
 
   const whatsappNumber = "9222220453";
@@ -18,12 +18,16 @@ Installation charges: ₹${pkg.installation}`;
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 overflow-auto p-4">
+    <div className="fixed inset-0 z-50 overflow-auto p-4" style={{ backgroundColor: dark ? "rgba(0,0,0,0.8)" : "rgba(0,0,0,0.5)" }}>
       {/* Modal container */}
-      <div className="bg-white rounded-2xl shadow-xl relative max-w-3xl mx-auto my-8 p-6 md:p-8 max-h-[90vh] flex flex-col">
+      <div className={`rounded-2xl shadow-xl relative max-w-3xl mx-auto my-8 p-6 md:p-8 max-h-[90vh] flex flex-col
+        ${dark ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+        
         {/* Close button */}
         <button
-          className="absolute top-4 right-4 text-black text-2xl font-bold hover:text-gray-900"
+          className={`absolute top-4 right-4 text-2xl font-bold hover:text-gray-400 ${
+            dark ? "text-white" : "text-black"
+          }`}
           onClick={onClose}
         >
           &times;
@@ -39,7 +43,13 @@ Installation charges: ₹${pkg.installation}`;
               key={index}
               onClick={() => setSelectedPackage(index)}
               className={`border rounded-xl p-4 cursor-pointer transition-all flex flex-col justify-between ${
-                selectedPackage === index ? "border-black bg-gray-200" : "border-black hover:bg-gray-50"
+                selectedPackage === index
+                  ? dark
+                    ? "border-white bg-gray-700"
+                    : "border-black bg-gray-200"
+                  : dark
+                  ? "border-white hover:bg-gray-800"
+                  : "border-black hover:bg-gray-50"
               }`}
             >
               <div>
