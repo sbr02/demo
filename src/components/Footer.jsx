@@ -30,7 +30,7 @@ const Footer = () => {
           <i className="fa-brands fa-linkedin"></i>
         </a>
         <a
-          href="mailto:info@specific.net?subject=Inquiry&body=Hello, I would like to know more about..."
+          href="mailto:specificnetconnect@gmail.com?subject=Inquiry&body=Hello, I would like to know more about..."
           className="text-xl hover:text-yellow-400"
         >
           <i className="fa-solid fa-envelope"></i>
