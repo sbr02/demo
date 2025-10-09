@@ -111,7 +111,7 @@ const Navbar = ({ dark, toggleTheme }) => {
   // WhatsApp CTA for 1Gbps + OTT plan
   const handleGbpsPlan = () => {
     const whatsappNumber = "9222220453";
-    const message = "Hello, I am interested in the 1Gbps + OTT @1499* plan.";
+    const message = "Hello, I am interested in the 1Gbps + OTT @ ₹1499* plan for 1 month. Please share the details and installation process.";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
