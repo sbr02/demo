@@ -45,7 +45,7 @@ const About = ({ dark }) => {
           >
             With our advanced Fiber-to-the-Home (FTTH) technology, customers enjoy:
           </p>
-          <ul className={`space-y-2 transition-colors text-lg md:text-xl ${
+          <ul className={`space-y-2 transition-colors text-start text-lg md:text-xl ${
               dark ? "text-white" : "text-black"
             }`}>
             <li className="flex items-start">
@@ -84,3 +84,6 @@ const About = ({ dark }) => {
 };
 
 export default About;
+
+
+

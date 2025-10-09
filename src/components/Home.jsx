@@ -76,3 +76,4 @@ const Home = ({ dark }) => {
 };
 
 export default Home;
+

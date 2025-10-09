@@ -70,3 +70,4 @@ const ReviewCard = ({ dark, data }) => (
 );
 
 export default Testimonials;
+
