@@ -239,14 +239,13 @@
 
 // export default Navbar;
 
-
 import React, { useState, useEffect } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const Navbar = ({ dark, toggleTheme }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 970);
+  const [isMobile, setIsMobile] = useState(false); // safe initial value
 
   const links = [
     { name: "Home", href: "#home" },
@@ -272,6 +271,8 @@ const Navbar = ({ dark, toggleTheme }) => {
       setIsMobile(window.innerWidth <= 970);
       if (window.innerWidth > 970) setMobileOpen(false);
     };
+
+    handleResize(); // set initial value on mount
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -297,7 +298,7 @@ const Navbar = ({ dark, toggleTheme }) => {
           </div>
         )}
 
-        {/* Right Section (SpeedTest + 1Gbps + Toggle + Hamburger) */}
+        {/* Right Section */}
         <div className="flex items-center gap-4">
           {/* SpeedTest Button (always visible) */}
           <a
